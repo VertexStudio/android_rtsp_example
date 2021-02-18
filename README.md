@@ -50,3 +50,10 @@ Go to line 159 in app/jni/rtsp-example.c and the replace the pipeline for:
 ```bash
 rtspsrc location=rtsp://192.72.1.1/liveRTSP/av2 latency=200 ! rtph264depay ! avdec_h264 ! fpsdisplaysink
 ```
+Go to line 29 in app/jni/Android.mk and add new GStreamer Plugins
+
+```bash
+$(GSTREAMER_PLUGINS_NET) $(GSTREAMER_PLUGINS_SYS) $(GSTREAMER_PLUGINS_CODECS_RESTRICTED) $(GSTREAMER_PLUGINS_EFFECTS) $(GSTREAMER_PLUGINS_NET_RESTRICTED)
+```
+
+
